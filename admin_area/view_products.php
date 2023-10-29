@@ -28,13 +28,13 @@
                     <table class="table table-striped table-bordered table-hover">
                         <thread>
                             <tr class="text-center">
-                                <th> ID Sản phẩm </th>
-                                <th> Tên sản phẩm </th>
-                                <th> Ảnh sản phẩm </th>
-                                <th> Giá </th>
-                                <th> Đã bán </th>
-                                <th> Từ khóa </th>
-                                <th> Hạn </th>
+                                <th> ID: </th>
+                                <th> Tên sản phẩm: </th>
+                                <th> Ảnh sản phẩm: </th>
+                                <th> Giá: </th>
+                                <th> Đã bán: </th>
+                                <th> Từ khóa: </th>
+                                <th> Hạn: </th>
                                 <th> Xóa sản phẩm </th>
                                 <th> Sửa sản phẩm </th>
                             </tr>
