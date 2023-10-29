@@ -208,7 +208,7 @@ if(isset($_POST['submit'])){
 
     if($run_product){
         echo "<script>alert('Sản phẩm đã cập nhật thành công!')</script>";
-        echo "<Script>window.open('index.php?view_products.php','_self')</Script>";
+        echo "<script>window.open('index.php?view_products','_self')</script>";
     }
 }   
 
