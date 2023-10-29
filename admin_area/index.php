@@ -71,7 +71,8 @@
                     }
                     if(isset($_GET['view_p_cats'])){
                         include("view_p_cats.php");
-                    }if(isset($_GET['delete_p_cat'])){
+                    }
+                    if(isset($_GET['delete_p_cat'])){
                         include_once('delete_p_cat.php');
                     }
                     if(isset($_GET['edit_p_cat'])){
@@ -79,12 +80,43 @@
                     }
                     if(isset($_GET['insert_cat'])){
                         include_once('insert_cat.php');
-                    }if(isset($_GET['view_cats'])){
+                    }
+                    if(isset($_GET['view_cats'])){
                         include_once('view_cats.php');
-                    }if(isset($_GET['edit_cat'])){
+                    }
+                    if(isset($_GET['edit_cat'])){
                         include_once('edit_cat.php');
-                    }if(isset($_GET['delete_cat'])){
+                    }
+                    if(isset($_GET['delete_cat'])){
                         include_once('delete_cat.php');
+                    }
+                    if(isset($_GET['insert_slide'])){
+                        include_once('insert_slide.php');
+                    }
+                    if(isset($_GET['view_slides'])){
+                        include_once('view_slides.php');
+                    }
+                    if(isset($_GET['delete_slide'])){
+                        include_once('delete_slide.php');
+                    }
+                    if(isset($_GET['edit_slide'])){
+                        include_once('edit_slide.php');
+                    }
+                    if(isset($_GET['view_customers'])){
+                        include_once('view_customers.php');
+                    }
+                    if(isset($_GET['delete_customer'])){
+                        include_once('delete_customer.php');
+                    }
+                    if(isset($_GET['view_orders'])){
+                        include_once('view_orders.php');
+                    }
+                    if(isset($_GET['delete_order'])){
+                        include_once('delete_order.php');
+                    }if(isset($_GET['view_payments'])){
+                        include_once('view_payments.php');
+                    }if(isset($_GET['delete_payment'])){
+                        include_once('delete_payment.php');
                     }
                 ?>
 
