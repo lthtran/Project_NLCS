@@ -112,7 +112,7 @@
                 </a>
                 <ul id="slides" class="collapse">
                     <li>
-                        <a href="index.php?insert_slide"> Thêm trang sản phẩm </a>
+                        <a href="index.php?insert_slide"> Thêm trang nền sản phẩm </a>
                     <li>
                         <a href="index.php?view_slides"> Trang sản phẩm </a>
                     </li>
@@ -136,23 +136,6 @@
                     <i class="fa fa-fw fa-money">
                     </i> Các khoản thanh toán
                 </a>
-            </li>
-            <li>
-                <a href="#" data-toggle="collapse" data-target="#users">
-                        <i class="fa fa-fw fa-users"></i> Người dùng
-                        <i class="fa fa-fw fa-caret-down"></i> 
-                </a>
-                <ul id="users" class="collapse">
-                    <li?>
-                        <a href="index.php?insert_user"> Thêm nguời dùng </a>
-                    </li>
-                    <li>
-                        <a href="index.php?view_users"> Xem thông tin </a>
-                    </li>
-                    <li>
-                        <a href="index.php?user_profile"> Sửa thông tin </a>
-                    </li>
-                </ul>
             </li>
             <li>
                 <a href="logout.php">
