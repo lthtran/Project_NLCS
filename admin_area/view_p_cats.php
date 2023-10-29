@@ -28,9 +28,9 @@
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Tên</th>
-                                <th>Mô tả</th>
+                                <th>ID: </th>
+                                <th>Tên: </th>
+                                <th>Mô tả: </th>
                                 <th>Chỉnh sửa</th>
                                 <th>Xóa</th>
                             </tr>
