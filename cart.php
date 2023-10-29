@@ -38,7 +38,7 @@
                                         <th colspan="2">Sản phẩm</th>
                                         <th>Số lượng</th>
                                         <th>Giá</th>
-                                        <th>Size</th>
+                                        <!-- <th>Size</th> -->
                                         <th colspan="1">Xóa</th>
                                         <th colspan="2">Tổng</th>
                                     </tr>
@@ -48,7 +48,7 @@
                                     $total = 0;
                                     while($row_cart = mysqli_fetch_array($run_cart)){
                                         $pro_id = $row_cart['p_id'];
-                                        $pro_size = $row_cart['size'];
+                                        // $pro_size = $row_cart['size'];
                                         $pro_qty = $row_cart['qty'];
                                             $get_products = "select * from products where product_id='$pro_id'";
                                             $run_products = mysqli_query($con,$get_products);
@@ -77,9 +77,9 @@
                                             <?php echo $only_price; ?>
                                         </td>
 
-                                        <td>
+                                        <!-- <td>
                                             <?php echo $pro_size; ?>
-                                        </td>
+                                        </td> -->
 
                                         <td>
                                             <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
