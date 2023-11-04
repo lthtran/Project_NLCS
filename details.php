@@ -1,6 +1,6 @@
 <?php
 
-    $active='Cart';
+    $active='details';
     include("includes/header.php");
 
 ?>
@@ -11,10 +11,10 @@
 
                 <ul class="breadcrumb">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="index.php">Trang chủ</a>
                     </li>
                     <li>
-                        Shop
+                        Cửa hàng
                     </li>
 
                     <li>
@@ -76,7 +76,7 @@
 
                                 <form action="details.php?add_cart=<?php echo $product_id; ?>" class="form-horizontal" method="post">
                                     <div class="form-group">
-                                        <label for="" class="col-md-5 control-label">Products Quantity</label>
+                                        <label for="" class="col-md-5 control-label">Số lượng:</label>
 
                                             <div class="col-md-7">
                                                 <select name="product_qty" id="" class="form-control">
@@ -88,22 +88,7 @@
                                                 </select>
                                             </div>
 
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-5 control-label">
-                                            Product Size
-                                        </label>
-
-                                        <div class="col-md-7">
-                                            <select name="product_size" class="form-control" required oninput="setCustomValidity('')" oninvalid="setCustomValidity('Must pick 1 size for the product')">
-                                                <option disabled selected>Select a size</option>
-                                                <option>Small</option>
-                                                <option>Medium</option>
-                                                <option>Large</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    </div>                       
 
                                     <p class="price"> <?php echo $pro_price; ?></p>
 
