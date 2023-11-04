@@ -19,35 +19,18 @@
                </ol>
                
                <div class="carousel-inner">
-                   <?php
-
-                   $get_slides = "select * from `slider` LIMIT 0,1";
-                   $run_slides = mysqli_query($con,$get_slides);
-                   while($row_slides=mysqli_fetch_array($run_slides)){
-                        $slide_name = $row_slides['slide_name'];
-                        $slide_image = $row_slides['slide_image'];
-                        
-                        echo"
-                        <div class='item active'>
-                        <img class='img-slide' src='admin_area/slides_images/$slide_image'>
-                        </div>
-                        ";
-                   }
-                   
-                   $get_slides = "select * from `slider` LIMIT 1,3";
-                   $run_slides = mysqli_query($con,$get_slides);
-                   while($row_slides=mysqli_fetch_array($run_slides)){
-                        $slide_name = $row_slides['slide_name'];
-                        $slide_image = $row_slides['slide_image'];
-                        
-                        echo"
-                        <div class='item'>
-                        <img class='img-slide' src='admin_area/slides_images/$slide_image'>
-                        </div>
-                        ";
-                   }
-                   ?>
-                   
+                    <div class='item active'>
+                        <img src='admin_area/slides_images/slide-1.webp'>
+                    </div>
+                    <div class='item'>
+                        <img src='admin_area/slides_images/slide-2.jpg'>
+                    </div>
+                    <div class='item'>
+                        <img src='admin_area/slides_images/slide-3.jpg'>
+                    </div>
+                    <div class='item'>
+                        <img src='admin_area/slides_images/slide-4.jpg'>
+                    </div>
                </div>
                
                <a href="#myCarousel" class="left carousel-control" data-slide="prev">
@@ -70,56 +53,13 @@
        
    </div>
      
-   <div id="advantages">
-        <div class="container">
-            <div class="same-height-row">
-                <div class="col-sm-4">
-                    <div class="box same-height">
-                        <div class="icon">
-                            <i class="fa fa-heart"></i>
-                        </div>
-
-                        <h3><a href="#">Best Offer</a></h3>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                    </div>
-
-                </div>
-                <div class="col-sm-4">
-                    <div class="box same-height">
-                        <div class="icon">
-                            <i class="fa fa-tag"></i>
-                        </div>
-
-                        <h3><a href="#">Best Prices</a></h3>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                    </div>
-
-                </div>
-                <div class="col-sm-4">
-                    <div class="box same-height">
-                        <div class="icon">
-                            <i class="fa fa-thumbs-up"></i>
-                        </div>
-
-                        <h3><a href="#">100% Original</a></h3>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-   </div>
 
    <div id="hot">
         <div class="box">
             <div class="container">
                 <div class="col-md-12">
                     <h2>
-                    Các sản phẩm mới nhất
+                    Bộ sưu tập yêu thích
                     </h2>
                 </div>
             </div>
