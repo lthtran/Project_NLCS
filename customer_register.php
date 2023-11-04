@@ -9,10 +9,10 @@
             <div class="col-md-12">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="index.php">Trang chủ</a>
                     </li>
                     <li>
-                        Register
+                        Đăng ký
                     </li>
                 </ul>
             </div>
@@ -27,52 +27,52 @@
                 <div class="box">
                     <div class="box-header">
                         <center>
-                            <h2> Register a new account </h2>
+                            <h2> Tạo tài khoản mới </h2>
                         </center>
                         <form action="customer_register.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label>Your Name</label>
+                                <label>Họ tên</label>
                                 <input type="text" class="form-control" name="c_name" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Your Email</label>
+                                <label>Email</label>
                                 <input type="text" class="form-control" name="c_email" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Your Password</label>
+                                <label>Mật khẩu</label>
                                 <input type="password" class="form-control" name="c_pass" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Your Country</label>
+                                <label>Quốc gia</label>
                                 <input type="text" class="form-control" name="c_country" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Your City</label>
+                                <label>Tỉnh/thành phố</label>
                                 <input type="text" class="form-control" name="c_city" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Your Address</label>
+                                <label>Địa chỉ cụ thể</label>
                                 <input type="text" class="form-control" name="c_address" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Your Contact</label>
+                                <label>SDT</label>
                                 <input type="text" class="form-control" name="c_contact" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Your Profile Picture</label>
+                                <label>Ảnh</label>
                                 <input type="file" class="form-control form-height-custom" name="c_image" required>
                             </div>
 
                             <div class="text-center">
                                 <button type="submit" name="register" class="btn btn-primary">
-                                <i class="fa fa-user-md"></i> Register
+                                <i class="fa fa-user-md"></i> Đăng Ký
                                 </button>
                             </div>
 
