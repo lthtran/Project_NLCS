@@ -8,10 +8,10 @@
             <div class="col-md-12">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="index.php">Trang chủ</a>
                     </li>
                     <li>
-                        Register
+                        Tài khoản
                     </li>
                 </ul>
             </div>
