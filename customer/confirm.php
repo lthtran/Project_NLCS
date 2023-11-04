@@ -22,23 +22,8 @@ if(isset($_GET['order_id'])){
     
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <style>
-        .carousel-inner .img-slide{
-            width: 700px !important;
-            height: 300px !important;
-        }
-        #content .product .text h3{
-            text-align: center;
-            font-size: 20px;
-        }
-        #content .product .text h3 a{
-            color: rgb(85, 85, 85);
-        }
-        body{
-            background-image: url();
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
+    
 </head>
 <body>
    
@@ -57,7 +42,7 @@ if(isset($_GET['order_id'])){
                         }
                     ?>
                </a>
-               <a href="checkout.php"><?php items(); ?> Sản phẩm trong giỏ hàng | Tổng tiền: <?php total_price(); ?> </a>
+               <a href="checkout.php"><?php items(); ?> sản phẩm trong giỏ hàng | Tổng cộng: <?php total_price(); ?> </a>
                
            </div>
            
@@ -102,11 +87,8 @@ if(isset($_GET['order_id'])){
            
            <div class="navbar-header">
                
-               <a href="../index.php" class="navbar-brand home">
-                   
-                   <img src="images/ecom-store-logo.png" alt="Alias-Store Logo" class="hidden-xs">
-                   <img src="images/ecom-store-logo-mobile.png" alt="Alias-Store Logo Mobile" class="visible-xs">
-                   
+               <a href="../index.php" class="navbar-brand home">                   
+                   <img src="images/logo.jpg" alt="Alias-Store Logo" class="hidden-xs">                   
                </a>
                
                <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -157,7 +139,7 @@ if(isset($_GET['order_id'])){
                    
                    <i class="fa fa-shopping-cart"></i>
                    
-                   <span><?php items(); ?> Sản phẩm trong giỏ hàng</span>
+                   <span><?php items(); ?> sản phẩm trong giỏ hàng</span>
                    
                </a>
                
@@ -250,11 +232,6 @@ if(isset($_GET['order_id'])){
                             <label> Mã hóa đơn: </label>
                             <input type="text" class="form-control" name="ref_no" required>
                         </div>
-
-                        <!-- <div class="form-group">
-                            <label> Omni Paisa / East Paisa: </label>
-                            <input type="text" class="form-control" name="code" required>
-                        </div> -->
 
                         <div class="form-group">
                             <label> Ngày thanh toán: </label>

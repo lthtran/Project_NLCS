@@ -105,19 +105,6 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="#" data-toggle="collapse" data-target="#slides">
-                        <i class="fa fa-fw fa-gear"></i> Trang
-                        <i class="fa fa-fw fa-caret-down"></i> 
-                </a>
-                <ul id="slides" class="collapse">
-                    <li>
-                        <a href="index.php?insert_slide"> Thêm trang nền sản phẩm </a>
-                    <li>
-                        <a href="index.php?view_slides"> Trang sản phẩm </a>
-                    </li>
-                </ul>
-            </li>
 
             <li>
                 <a href="index.php?view_customers">

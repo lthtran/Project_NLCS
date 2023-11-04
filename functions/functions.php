@@ -62,7 +62,7 @@ function getPro(){
 
                     <p class='button'>
                         <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
-                        View Details
+                        Xem chi tiết
                         </a>
 
                         <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
@@ -117,7 +117,6 @@ function getpcatpro(){
         $run_p_cat = mysqli_query($db,$get_p_cat);
         $row_p_cat = mysqli_fetch_array($run_p_cat);
         $p_cat_title = $row_p_cat['p_cat_title'];
-        $p_cat_desc = $row_p_cat['p_cat_desc'];
         $get_products = "select * from products where p_cat_id='$p_cat_id'";
         $run_products = mysqli_query($db,$get_products);
         $count = mysqli_num_rows($run_products);
@@ -132,7 +131,6 @@ function getpcatpro(){
             echo"
             <div class='box'>
                 <h1> $p_cat_title </h1>
-                <p> $p_cat_desc </p>
             </div>
             
             ";
@@ -185,7 +183,6 @@ function getcatpro(){
         $run_cat = mysqli_query($db,$get_cat);
         $row_cat = mysqli_fetch_array($run_cat);
         $cat_title = $row_cat['cat_title'];
-        $cat_desc = $row_cat['cat_desc'];
         $get_cat = "select * from products where cat_id='$cat_id'";
         $run_products = mysqli_query($db,$get_cat);
         $count = mysqli_num_rows($run_products);
@@ -199,7 +196,6 @@ function getcatpro(){
             echo "
                 <div class='box'>
                     <h1> $cat_title </h1>
-                    <p> $cat_desc </p>
                 </div>
             ";
         }
@@ -272,7 +268,7 @@ function total_price(){
         }
     }
 
-    echo"$" . $total;
+    echo $total;
 }
 
 

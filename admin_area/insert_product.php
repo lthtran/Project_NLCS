@@ -69,11 +69,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-3 control-label"> Mục </label>
+                            <label class="col-md-3 control-label"> Danh mục </label>
 
                             <div class="col-md-6">
                                 <select name="cat" class="form-control">
-                                    <option> Chọn mục </option>
+                                    <option> Chọn danh mục </option>
                                     <?php
                                     $get_cat = "select * from categories";
                                     $run_cat = mysqli_query($con,$get_cat);
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-3 control-label"> Giá </label>
+                            <label class="col-md-3 control-label">Đơn giá </label>
 
                             <div class="col-md-6">
                                 <input name="product_price" type="text" class="form-control" required>

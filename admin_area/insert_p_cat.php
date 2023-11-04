@@ -33,13 +33,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="control-label col-md-3">Mô tả</label>
-                        <div class="col-md-6">
-                            <textarea type='text' name="p_cat_desc" id="" cols="30" rows="5" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
                         <label for="" class="control-label col-md-3"></label>
                         <div class="col-md-6">
                             <input  value="Submit" name="submit" type="submit" class="form-control btn btn-primary">
@@ -54,8 +47,7 @@
 <?php
     if(isset($_POST['submit'])){
         $p_cat_title = $_POST['p_cat_title'];
-        $p_cat_desc = $_POST['p_cat_desc'];
-        $insert_p_cat = "insert into product_categories (p_cat_title,p_cat_desc) values ('$p_cat_title,$p_cat_desc')";
+        $insert_p_cat = "insert into product_categories (p_cat_title,p_cat_desc) values ('$p_cat_title')";
         $run_p_cat = mysqli_query($con, $insert_p_cat);
         if($run_p_cat){
             echo "<script>alert('Loại sản phẩm mới đã được thêm vào.')</script>";

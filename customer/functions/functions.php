@@ -18,7 +18,6 @@ function add_cart(){
         $ip_add = getRealIpUser();
         $p_id = $_GET['add_cart'];
         $product_qty = $_POST['product_qty'];
-        $product_size = $_POST['product_size'];
         $check_product = "select *from cart where ip_add='$ip_add' AND p_id='$p_id'";
         $run_check = mysqli_query($con,$check_product);
         if(mysqli_num_rows($run_check)>0){
@@ -26,7 +25,7 @@ function add_cart(){
             echo "<script>window.open('details.php?pro_id=$p_id','_self')</script>";
 
         }else{
-            $query = "insert into cart (p_id,ip_add,qty,size) values('$p_id','$ip_add','$product_qty','$product_size')";
+            $query = "insert into cart (p_id,ip_add,qty,size) values('$p_id','$ip_add','$product_qty')";
             $run_query = mysqli_query($con,$query);
             echo "<script>window.open('details.php?pro_id=$p_id','_self')</script>";
 
@@ -117,7 +116,6 @@ function getpcatpro(){
         $run_p_cat = mysqli_query($con,$get_p_cat);
         $row_p_cat = mysqli_fetch_array($run_p_cat);
         $p_cat_title = $row_p_cat['p_cat_title'];
-        $p_cat_desc = $row_p_cat['p_cat_desc'];
         $get_products = "select * from products where p_cat_id='$p_cat_id'";
         $run_products = mysqli_query($con,$get_products);
         $count = mysqli_num_rows($run_products);
@@ -132,7 +130,6 @@ function getpcatpro(){
             echo"
             <div class='box'>
                 <h1> $p_cat_title </h1>
-                <p> $p_cat_desc </p>
             </div>
             
             ";
@@ -157,7 +154,7 @@ function getpcatpro(){
                     </h3>
 
                     <p class='price'>
-                        $ $pro_price
+                         $pro_price
                     </p>
 
                     <p class='button'>
@@ -207,7 +204,6 @@ function getcatpro(){
             $pro_id = $row_products['product_id'];
             $pro_title = $row_products['product_title'];
             $pro_price = $row_products['product_price'];
-            $pro_desc = $row_products['product_desc'];
             $pro_img1 = $row_products['product_img1'];
             
             echo "
@@ -227,10 +223,10 @@ function getcatpro(){
                             </p>
                             <p class='buttons'>
                                 <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
-                                    View Details
+                                    Xem chi tiết
                                 </a>
                                 <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
-                                    <i class='fa fa-shopping-cart'></i> Add To Cart
+                                    <i class='fa fa-shopping-cart'></i> Thêm vào giỏ hàng
                                 
                                 </a>
                             
@@ -272,7 +268,7 @@ function total_price(){
         }
     }
 
-    echo"$" . $total;
+    echo $total;
 }
 
 

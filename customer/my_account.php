@@ -18,8 +18,14 @@ include("functions/functions.php");
     
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .btn-primary{
+            color: rgb(255, 255, 255);
+            background: #198754;
+            border-color: #198754;
+        }
+    </style>
 </head>
 <body>
    
@@ -29,7 +35,7 @@ include("functions/functions.php");
            
            <div class="col-md-6 offer">
                
-               <a href="#" class="btn btn-success btn-sm">
+               <a href="#" class="btn btn-primary btn-sm">
                     <?php
                         if(!isset($_SESSION['customer_email'])){
                             echo"Welcome: Khách hàng";
@@ -38,7 +44,7 @@ include("functions/functions.php");
                         }
                     ?>
                </a>
-               <a href="checkout.php"><?php items(); ?> Sản phẩm trong giỏ hàng | Tổng tiền: <?php total_price(); ?> </a>
+               <a href="checkout.php">Tổng cộng: <?php total_price(); ?> </a>
                
            </div>
            
@@ -84,9 +90,7 @@ include("functions/functions.php");
            <div class="navbar-header">
                
                <a href="../index.php" class="navbar-brand home">
-                   
-                   <img src="images/ecom-store-logo.png" alt="Alias-Store Logo" class="hidden-xs">
-                   <img src="images/ecom-store-logo-mobile.png" alt="Alias-Store Logo Mobile" class="visible-xs">
+                   <img src="images/logo.jpg" alt="Alias-Store Logo" class="hidden-xs">
                    
                </a>
                
@@ -138,7 +142,7 @@ include("functions/functions.php");
                    
                    <i class="fa fa-shopping-cart"></i>
                    
-                   <span><?php items(); ?> Sản phẩm trong giỏ hàng</span>
+                   <span><?php items(); ?></span>
                    
                </a>
                
@@ -199,44 +203,30 @@ include("functions/functions.php");
             </div>
 
             <div class="col-md-3">
-
-    <?php
-        include("./includes/sidebar.php");
-    ?>
+                <?php
+                    include("./includes/sidebar.php");
+                ?>
             </div>
 
             <div class="col-md-9">
                 <div class="box">
 
                     <?php
-                    if(isset($_GET['my_orders'])){
-                        include("my_orders.php");
-                    }
-                    ?>
-
-                    <?php
-                    if(isset($_GET['pay_offline'])){
-                        include("pay_offline.php");
-                    }
-                    ?>
-
-                    
-                    <?php
-                    if(isset($_GET['edit_account'])){
-                        include("edit_account.php");
-                    }
-                    ?>
-
-                    <?php
-                    if(isset($_GET['change_pass'])){
-                        include("change_pass.php");
-                    }
-                    ?>
-
-<?php
-                    if(isset($_GET['delete_account'])){
-                        include("delete_account.php");
-                    }
+                        if(isset($_GET['my_orders'])){
+                            include("my_orders.php");
+                        }
+                  
+                        if(isset($_GET['edit_account'])){
+                            include("edit_account.php");
+                        }
+              
+                        if(isset($_GET['change_pass'])){
+                            include("change_pass.php");
+                        }
+              
+                        if(isset($_GET['delete_account'])){
+                            include("delete_account.php");
+                        }
                     ?>
                 </div>
             </div>

@@ -13,7 +13,6 @@
         $row_edit = mysqli_fetch_array($run_edit);
         $p_cat_id = $row_edit['p_cat_id'];
         $p_cat_title = $row_edit['p_cat_title'];
-        $p_cat_desc = $row_edit['p_cat_desc'];
 
     }
 ?>
@@ -46,13 +45,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="" class="control-label col-md-3">Mô tả</label>
-                        <div class="col-md-6">
-                            <textarea type='text' name="p_cat_desc" id="" cols="30" rows="5" class="form-control"><?php echo $p_cat_desc; ?>"</textarea>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
                         <label for="" class="control-label col-md-3"></label>
                         <div class="col-md-6">
                             <input  value="Cập nhật" name="submit" type="submit" class="form-control btn btn-primary">
@@ -67,7 +59,6 @@
 <?php
     if(isset($_POST['submit'])){
         $p_cat_title = $_POST['p_cat_title'];
-        $p_cat_desc = $_POST['p_cat_desc'];
         $update_p_cat = "update product_categories set p_cat_title='$p_cat_title',p_cat_desc='$p_cat_desc' where p_cat_id='$p_cat_id'";
         $run_p_cat = mysqli_query($con,$update_p_cat);
         if($run_p_cat){

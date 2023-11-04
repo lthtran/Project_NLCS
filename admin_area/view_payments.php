@@ -9,7 +9,7 @@
     <div class="col-lg-12">
         <ol class="breadcrumb">
             <li class="active">
-                <i class="fa fa-dashboard"></i> Bảng điều khiển/ Xem đơn hàng
+                <i class="fa fa-dashboard"></i> Bảng điều khiển/ Các khoản thanh toán
             </li>
         </ol>
     </div>
@@ -20,7 +20,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <i class="fa fa-tags"></i> Xem đơn hàng
+                    <i class="fa fa-tags"></i> Các khoản thanh toán
                 </h3>
             </div>
             <div class="panel-body">
@@ -29,7 +29,7 @@
                         <thread>
                             <tr class="text-center">
                                 <th> STT </th>
-                                <th> Số hóa đơn </th>
+                                <th> STT hóa đơn </th>
                                 <th> Giá </th>
                                 <th> Chế độ thanh toán </th>
                                 <th> Mã hóa đơn </th>

@@ -17,7 +17,7 @@
     </div>
 
     <div class="text-center">
-        <button type="submit" name="submit" class="btn btn-primary">
+        <button type="submit" name="submit" class="btn btn-info">
             <i class="fa fa-user-md">
                 Cập nhật mật khẩu
             </i>
@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
         exit();
     }
     if($c_new_pass!=$c_new_pass_again){
-        echo "<script>alert('Mật khẩu không trùng khớp!')</script>";
+        echo "<script>alert('Mật khẩu không khớp!')</script>";
         exit();
     }
     $update_c_pass = "update customers set customer_pass='$c_new_pass' where customer_email='$c_email'";

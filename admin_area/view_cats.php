@@ -30,7 +30,6 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Tên</th>
-                                <th>Mô tả</th>
                                 <th>Chỉnh sửa</th>
                                 <th>Xóa</th>
                             </tr>
@@ -43,7 +42,6 @@
                             while($row_cats=mysqli_fetch_array($run_cats)){
                                 $cat_id = $row_cats['cat_id'];
                                 $cat_title = $row_cats['cat_title'];
-                                $cat_desc = $row_cats['cat_desc'];
                                 $i++;
                             
                              ?>
@@ -51,9 +49,8 @@
                             <tr>
                                 <td><?php echo $i ?></td>
                                 <td><?php echo $cat_title; ?></td>
-                                <td width="300"><?php echo $cat_desc; ?></td>
-                                <td><a href="index.php?edit_cat=<?php echo $cat_id; ?>"><i class="fa fa-pencil"></i>Sửa</a></td>
-                                <td><a href="index.php?delete_cat=<?php echo $cat_id; ?>"><i class="fa fa-trash"></i>Xóa</a></td>
+                                <td><a href="index.php?edit_cat=<?php echo $cat_id; ?>"><i class="fa fa-pencil"></i> Sửa</a></td>
+                                <td><a href="index.php?delete_cat=<?php echo $cat_id; ?>"><i class="fa fa-trash"></i> Xóa</a></td>
                             </tr>
                             <?php } ?>
                         </tbody>

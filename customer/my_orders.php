@@ -1,8 +1,7 @@
 <center>
     <h1> Đơn hàng của tôi </h1>
-    <!-- <p class="lead"> Your orders on one place </p> -->
     <p class="text-muted">
-    Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ <a href="../contact.php">ở đây</a>. Chúng tôi làm việc <strong>24/7</strong>
+    Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ <a href="../contact.php">ở đây</a>. Cửa hàng chúng tớ làm việc <strong>24/7</strong>
     </p>
 </center>
 
@@ -16,7 +15,6 @@
                 <th> Giá: </th>
                 <th> Mã hóa đơn: </th>
                 <th> Số lượng: </th>
-                <th> Size: </th>
                 <th> Ngày đặt hàng </th>
                 <th> Đã thanh toán / Chưa thanh toán: </th>
                 <th> Trạng thái: </th>
@@ -39,11 +37,10 @@
                 $due_amount = $row_orders['due_amount'];
                 $invoice_no = $row_orders['invoice_no'];
                 $qty = $row_orders['qty'];
-                $size = $row_orders['size'];
                 $order_date = substr($row_orders['order_date'],0,11);
                 $order_status = $row_orders['order_status'];
                 $i++;
-                if($order_status=='pending'){
+                if($order_status=='Pending'){
                     $order_status = 'Chưa thanh toán';
                 }else{
                     $order_status = 'Đã thanh toán';
@@ -55,12 +52,11 @@
                 <td> <?php echo $due_amount; ?> </td>
                 <td> <?php echo $invoice_no; ?> </td>
                 <td> <?php echo $qty; ?> </td>
-                <td> <?php echo $size; ?> </td>
                 <td> <?php echo $order_date; ?> </td>
                 <td> <?php echo $order_status; ?> </td>
 
                 <td>
-                    <a href="confirm.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn btn-primary btn-sm"> Xác nhận đã thanh toán </a>
+                    <a href="confirm.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn btn-primary btn-sm"> Xác nhận thanh toán </a>
                 </td>
             </tr>
             <?php } ?>

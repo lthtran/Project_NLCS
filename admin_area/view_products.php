@@ -34,7 +34,7 @@
                                 <th> Giá: </th>
                                 <th> Đã bán: </th>
                                 <th> Từ khóa: </th>
-                                <th> Hạn: </th>
+                                <th> Ngày thêm: </th>
                                 <th> Xóa sản phẩm </th>
                                 <th> Sửa sản phẩm </th>
                             </tr>

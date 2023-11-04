@@ -51,10 +51,10 @@ $customer_image = $row_customer['customer_image'];
     <div class="form-group">
         <label> Ảnh đại diện: </label>
         <input type="file" name="c_image" class="form-control form-height-custom">
-        <img class="img-responsive" src="customer_images/avt.jpg" alt="Costumer Image">
+        <img class="img-responsive" src="customer_images/<?php echo $customer_image; ?>" alt="Ảnh đại diện">
     </div>
 
-    <div class="text-center">
+    <div class="text-center" style="padding-bottom: 5px;">
         <button name="update" class="btn btn-primary">
             <i class="fa fa-user-md">
                 Cập nhật
@@ -72,13 +72,13 @@ if(isset($_POST['update'])){
     $c_city = $_POST['c_city'];
     $c_address = $_POST['c_address'];
     $c_contact = $_POST['c_contact'];
-    $c_image = $_POST['c_image']['name'];
+    $c_image = $_FILES['c_image']['name'];
     $c_image_tmp = $_FILES['c_image']['tmp_name'];
-    move_uploaded_file($c_image_tmp,"customer_images/$c_image");
-    $update_customer = " update customers set customer_name='$c_name',customer_email='$c_email',customer_country='$c_country',customer_city='$c_city',customer_address='$c_address',customer_contact='$c_contact',customer_image='$c_image' where customer_id='$update_id' ";
+    move_uploaded_file($c_image_tmp,"./customer_images/$c_image");
+    $update_customer = "update customers set customer_name='$c_name',customer_email='$c_email',customer_country='$c_country',customer_city='$c_city',customer_address='$c_address',customer_contact='$c_contact',customer_image='$c_image' where customer_id='$update_id' ";
     $run_customer = mysqli_query($con,$update_customer);
     if($run_customer){
-        echo "<script>alert('Chỉnh sửa tài khoản thành công !!')</script>";
+        echo "<script>alert('Chỉnh sửa thành công. Vui lòng đăng nhập lại!')</script>";
         echo "<script>window.open('logout.php','_self')</script>";
     }
 }

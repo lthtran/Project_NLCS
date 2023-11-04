@@ -1,10 +1,7 @@
 <div class="box">   
     <div class="box-header">
         <center>
-            <h1> Login </h1>
-            <p class="lead"> Already have our account..? </p>
-            <p class="text-muted">Lorem ipsum dolor sit amet 
-                consectetur adipisicing elit. Possimus sunt officia iste itaque repellendus fuga molestiae, ullam ratione corporis, mollitia necessitatibus quas eum, ipsum illum magni maiores saepe veniam quia?</p>
+            <h1> Đăng nhập </h1>
         </center>
     </div>
     <form method="post" action="checkout.php">
@@ -18,16 +15,20 @@
             <input name="c_pass" type="password" class="form-control" required>
         </div>
 
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me </label>
+        </div>
+
         <div class="text-center">
             <button name="login" value="Login" class="btn btn-primary">
-                <i class="fa fa-sign-in"></i> Login
+                <i class="fa fa-sign-in"></i> Submit
             </button>
         </div>
     </form>
 
     <center>
         <a href="customer_register.php">
-            <h3> Chưa có tài khoản. Đăng ký tại đây </h3>
+            <h3> Chưa có tài khoản?Đăng ký tại đây </h3>
         </a>
     </center>
 </div>
@@ -44,17 +45,17 @@ if(isset($_POST['login'])){
     $run_cart = mysqli_query($con,$select_cart);
     $check_cart = mysqli_num_rows($run_cart);
     if($check_customer==0){
-        echo "<script>alert('Your email or password is wrong')</script>";
+        echo "<script>alert('Email hoặc Mật khẩu sai!!')</script>";
         exit();
     }
     if($check_customer==1 and $check_cart==0){
         $_SESSION['customer_email']=$customer_email;
-        echo "<script>alert('You are Logged in')</script>";
+        echo "<script>alert('Đăng nhập thành công.')</script>";
         echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
 
     }else{
         $_SESSION['customer_email']=$customer_email;
-        echo "<script>alert('You are Logged in')</script>";
+        echo "<script>alert('Đăng nhập thành công.')</script>";
         echo "<script>window.open('checkout.php','_self')</script>";
     }
 }

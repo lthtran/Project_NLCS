@@ -82,7 +82,7 @@ if(isset($_GET['pro_id'])){
                         }
                     ?>
                </a>
-               <a href="checkout.php"><?php items(); ?> Sản phẩm trong giỏ hàng | Tổng tiền: <?php total_price(); ?> </a>
+               <a href="checkout.php"><?php items(); ?> sản phẩm trong giỏ hàng | Tổng tiền: <?php total_price(); ?> </a>
                
            </div>
            
@@ -182,7 +182,7 @@ if(isset($_GET['pro_id'])){
                    
                    <i class="fa fa-shopping-cart"></i>
                    
-                   <span><?php items(); ?> Sản phẩm trong giỏ hàng</span>
+                   <span><?php items(); ?></span>
                    
                </a>
                

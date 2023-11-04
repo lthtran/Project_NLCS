@@ -90,18 +90,6 @@
                     if(isset($_GET['delete_cat'])){
                         include_once('delete_cat.php');
                     }
-                    if(isset($_GET['insert_slide'])){
-                        include_once('insert_slide.php');
-                    }
-                    if(isset($_GET['view_slides'])){
-                        include_once('view_slides.php');
-                    }
-                    if(isset($_GET['delete_slide'])){
-                        include_once('delete_slide.php');
-                    }
-                    if(isset($_GET['edit_slide'])){
-                        include_once('edit_slide.php');
-                    }
                     if(isset($_GET['view_customers'])){
                         include_once('view_customers.php');
                     }
@@ -113,9 +101,11 @@
                     }
                     if(isset($_GET['delete_order'])){
                         include_once('delete_order.php');
-                    }if(isset($_GET['view_payments'])){
+                    }
+                    if(isset($_GET['view_payments'])){
                         include_once('view_payments.php');
-                    }if(isset($_GET['delete_payment'])){
+                    }
+                    if(isset($_GET['delete_payment'])){
                         include_once('delete_payment.php');
                     }
                 ?>

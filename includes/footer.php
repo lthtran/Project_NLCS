@@ -1,5 +1,4 @@
 <?php
-// include_once('./db.php');
 $con = mysqli_connect("localhost","root","","alias-store");
 
  ?>
@@ -9,10 +8,10 @@ $con = mysqli_connect("localhost","root","","alias-store");
             <div class="col-sm-6 col-md-3">
                 <h4>Trang</h4>
                 <ul>
-                    <li><a href="cart.php">Shopping Cart</a></li>
-                    <li><a href="contact.php">Contact Us</a></li>
-                    <li><a href="shop.php">Shop</a></li>
-                    <li><a href="../customer/my_account.php">My Account</a></li>
+                    <li><a href="cart.php">Giỏ Hàng</a></li>
+                    <li><a href="contact.php">Liên Hệ</a></li>
+                    <li><a href="shop.php">Cửa hàng</a></li>
+                    <li><a href="../customer/my_account.php">Tài Khoản</a></li>
                 </ul>
                 <hr>
                 <h4>Khách hàng</h4>
@@ -22,11 +21,10 @@ $con = mysqli_connect("localhost","root","","alias-store");
                     if(!isset($_SESSION['customer_email'])){
                         echo"<a href='checkout.php'>Đăng Nhập</a>";
                     }else{
-                        echo"<a href='customer/my_account.php?my_orders'>My Account</a>";
+                        echo"<a href='customer/my_account.php?my_orders'>Tài Khoản</a>";
                     }
 
                     ?>
-                    <!-- <li><a href="checkout.php">Đăng nhập</a></li> -->
                     <li><a href="customer_register.php">Đăng Ký</a></li>
                 </ul>
                 <hr class="hidden-md hidden-lg hidden-sm">
@@ -54,7 +52,7 @@ $con = mysqli_connect("localhost","root","","alias-store");
             </div>
 
             <div class="col-sm-6 col-md-3">
-                <h4>Find Us:</h4>
+                <h4>Tìm chúng tôi:</h4>
                 <p>
                     <strong>Alias Store inc.</strong>
                     <br/>Quận Ninh Kiều
@@ -67,9 +65,9 @@ $con = mysqli_connect("localhost","root","","alias-store");
                 <hr class="hidden-md hidden-lg">
             </div>
             <div class="col-sm-6 col-md-3">
-                <h4>Get The News</h4>
+                <h4>Nhận tin tức</h4>
                 <p class="text-muted">
-                    Dont miss our latest update.
+                Đừng bỏ lỡ cập nhật mới nhất của chúng tôi.
                 </p>
                 <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=M-devMedia', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" method="post">
                     <div class="input-group">
@@ -82,18 +80,17 @@ $con = mysqli_connect("localhost","root","","alias-store");
                     </div>
                 </form>
                 <hr>
-                <h4>Liên lạc</h4>
+                <h4>Kết nối</h4>
                 <p class="social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-envelope"></a>
-                    <a href="#" class="fa fa-google-plus"></a>
+                    <a href="https://www.facebook.com/miuusilverr" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/miuu.silver/?hl=en" class="fa fa-instagram"></a>
+                    <a href="https://shopee.vn/miuusilverhn?af_click_lookback=7d&af_reengagement_window=7d&af_siteid=an_17367940002&af_sub_siteid=ShopeeMiuu----&af_viewthrough_lookback=1d&c=-&is_retargeting=true&pid=affiliates&smtt=0.0.9&utm_campaign=-&utm_content=ShopeeMiuu----&utm_medium=affiliates&utm_source=an_17367940002" class="fa fa-shopping-cart"></a>
+                    <a href="https://beacons.ai/miuusilver" class="fa fa-link"></a>
                 </p>
             </div>
         </div>
     </div>
 </div>
-
 <div id="copyright">
     <div class="container">
         <div class="col-md-6">
