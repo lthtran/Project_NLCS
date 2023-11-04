@@ -8,14 +8,15 @@
 
     ?>
     <h1 class="text-center">Phương thức thanh toán</h1>
+    <hr>
     <p class="lead text-center">
         <a href="order.php?c_id=<?php echo $customer_id ?>"> Thanh toán trực tuyến </a>
     </p>
+    
     <center>
         <p class="lead">
-            <a href="#">
-                Thanh toán thông qua PayPal
-                <img class="img-responsive" src="images/paypal_img.png" alt="img-paypall">
+            <a href="https://sandbox.vnpayment.vn/tryitnow/Home/CreateOrder">
+                Thanh toán qua thẻ ngân hàng
             </a> 
         </p>
     </center>
