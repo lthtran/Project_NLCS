@@ -268,8 +268,8 @@
                                 <td> <?php echo $qty; ?> </td>
                                 <td> 
                                     <?php
-                                        if($order_status == 'pending'){
-                                            echo $order_status='pending';
+                                        if($order_status == 'Pending'){
+                                            echo $order_status='Pending';
                                         }
                                         else{
                                             echo $order_status='Complete';
@@ -285,7 +285,7 @@
                 </div>
 
                 <div class="text-right">
-                    <a href="index.php>view_orders">
+                    <a href="index.php?view_orders">
                         Xem tất cả đơn hàng <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
