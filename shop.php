@@ -80,14 +80,10 @@
                                                     <p class='price'>
                                                        $pro_price
                                                     </p>
-                                                    <p class='buttons'>
+                                                    <p class='buttons text-center'>
                                                         <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
-                                                            View Details
-                                                        </a>
-                                                        <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
-                                                            <i class='fa fa-shopping-cart'></i> Add To Cart
-                                                        
-                                                        </a>
+                                                            Xem chi tiết
+                                                        </a>                                                      
                                                     
                                                     </p>
                                                 </div>
@@ -110,25 +106,24 @@
 
                             echo"
                                 <li>
-                                    <a href='shop.php?page=1'>".'1'."</a>
+                                    <a href='shop.php?page=1'>".'&laquo'."</a>
                                 </li>
                             
                             ";
-                            for($i=2; $i<=$total_pages; $i++){
+                            for($i=1; $i<=$total_pages; $i++){
                                 echo"
                                 <li>
                                     <a href='shop.php?page=".$i."'>".$i."</a>
                                 </li>
                             
-                            ";
+                                ";
                             };
 
-                            // echo"
-                            //     <li>
-                            //         <a href='shop.php?page=$total_pages'> ".'Last Page'." </a>
-                            //     </li>
-                            
-                            // ";
+                            echo"
+                                <li>
+                                    <a href='shop.php?page=".$total_pages."'>".'&raquo'."</a>
+                                </li>
+                            ";
                             
                             }
                         }
