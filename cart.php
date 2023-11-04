@@ -27,7 +27,6 @@
                         $select_cart = "select * from cart where ip_add='$ip_add'";
                         $run_cart = mysqli_query($con,$select_cart);
                         $count = mysqli_num_rows($run_cart);
-
                         ?>
                         <p class="text-muted">Bạn có <?php echo $count; ?> mặt hàng trong giỏ hàng của bạn</p>
 
@@ -38,7 +37,6 @@
                                         <th colspan="2">Sản phẩm</th>
                                         <th>Số lượng</th>
                                         <th>Giá</th>
-                                        <!-- <th>Size</th> -->
                                         <th colspan="1">Xóa</th>
                                         <th colspan="2">Tổng</th>
                                     </tr>
@@ -48,7 +46,6 @@
                                     $total = 0;
                                     while($row_cart = mysqli_fetch_array($run_cart)){
                                         $pro_id = $row_cart['p_id'];
-                                        // $pro_size = $row_cart['size'];
                                         $pro_qty = $row_cart['qty'];
                                             $get_products = "select * from products where product_id='$pro_id'";
                                             $run_products = mysqli_query($con,$get_products);
@@ -75,11 +72,7 @@
 
                                         <td>
                                             <?php echo $only_price; ?>
-                                        </td>
-
-                                        <!-- <td>
-                                            <?php echo $pro_size; ?>
-                                        </td> -->
+                                        </td>                               
 
                                         <td>
                                             <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
@@ -116,7 +109,7 @@
                                 </button>
 
                                 <a href="checkout.php" class="btn btn-primary">
-                                    Proceed Checkout <i class="fa fa-chevron-right"></i>
+                                    Thanh toán <i class="fa fa-chevron-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -175,14 +168,13 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
                 <div id="order-summary" class="box">
                     <div class="box-header">
-                        <h3>Đơn đặt hàng</h3>
+                        <h3>Hóa đơn đặt hàng</h3>
                     </div>
 
-                    <p class="text-muted">
-                    Chi phí vận chuyển được tính                 </p>
+                    <p class="text-muted">Hóa đơn được xuất trong ngày.</p>
 
                     <div class="table-responsive">
                         <table class="table">
