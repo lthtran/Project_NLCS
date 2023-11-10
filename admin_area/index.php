@@ -108,6 +108,20 @@
                     if(isset($_GET['delete_payment'])){
                         include_once('delete_payment.php');
                     }
+                    if(isset($_GET['view_users'])){
+                        include_once('view_users.php');
+                    }
+                    if(isset($_GET['delete_user'])){
+                        include_once('delete_user.php');
+                    }
+                    if(isset($_GET['insert_user'])){
+                        include_once('insert_user.php');
+                    }
+                    if(isset($_GET['user_profile'])){
+                        include_once('user_profile.php');
+                    }if(isset($_GET['statistics'])){
+                        include_once('statistics.php');
+                    }
                 ?>
 
             </div>
