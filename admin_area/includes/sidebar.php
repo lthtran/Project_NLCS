@@ -125,10 +125,34 @@
                 </a>
             </li>
             <li>
+                <a href="#" data-toggle="collapse" data-target="#users">
+                        <i class="fa fa-fw fa-users"></i> Người dùng
+                        <i class="fa fa-fw fa-caret-down"></i>
+                </a>
+                <ul id="users" class="collapse">
+                    <li>
+                        <a href="index.php?insert_user"> Thêm người dùng </a>
+                    </li>
+                    <li>
+                        <a href="index.php?view_users"> Xem thông tin </a>
+                    </li>
+                    <li>
+                        <a href="index.php?user_profile=<?php echo $admin_id; ?>"> Chỉnh sửa </a>
+                    </li>
+                </ul>
+                
+            </li>
+            <li>
+                <a href="index.php?statistics">
+                <i class="fa fa-bar-chart"></i> Thống kê
+                </a>
+            </li>
+            <li>
                 <a href="logout.php">
                     <i class="fa fa-fw fa-power-off"></i> Thoát
                 </a>
             </li>
+            
         </ul>
     </div>
 </nav>
