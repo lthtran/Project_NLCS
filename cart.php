@@ -89,7 +89,7 @@
 
                                 <tfoot>
                                     <tr>
-                                        <th colspan="5">Total</th>
+                                        <th colspan="5">Tổng thu</th>
                                         <th colspan="2"><?php echo $total; ?></th>
                                     </tr>
                                 </tfoot>
@@ -158,6 +158,11 @@
                                     <div class='text'>
                                         <h3><a href='details.php?pro_id=$pro_id'> $pro_title </a></h3>
                                         <p class='price'>$pro_price</p>
+                                        <p class='button text-center'>
+                                            <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
+                                                Xem chi tiết
+                                            </a>                                                                                                         
+                                        </p>
                                     </div>
 
                                 </div>
@@ -169,7 +174,7 @@
             </div>
 
             <div class="col-md-3 col-sm-6">
-                <div id="order-summary" class="box">
+                <div id="order" class="box">
                     <div class="box-header">
                         <h3>Hóa đơn đặt hàng</h3>
                     </div>
@@ -190,7 +195,7 @@
                                 </tr>
 
                                 <tr class="total">
-                                    <td> Total </td>
+                                    <td> Tổng thu </td>
                                     <th> <?php echo $total; ?> </th>
                                 </tr>
                             </tbody>
