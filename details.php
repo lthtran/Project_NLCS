@@ -20,7 +20,9 @@
                     <li>
                         <a href="shop.php?p_cat=<?php echo $p_cat_id; ?>"><?php echo $p_cat_title; ?></a>
                     </li>
-                    <li> <?php echo $pro_title; ?> </li>
+                    <li> 
+                        <?php echo $pro_title; ?> 
+                    </li>
                 </ul>
             </div>
 
@@ -76,7 +78,7 @@
 
                                 <form action="details.php?add_cart=<?php echo $product_id; ?>" class="form-horizontal" method="post">
                                     <div class="form-group">
-                                        <label for="" class="col-md-5 control-label">Số lượng:</label>
+                                        <label for="" class="col-md-5 control-label">Số lượng: </label>
 
                                             <div class="col-md-7">
                                                 <select name="product_qty" id="" class="form-control">
@@ -126,7 +128,8 @@
                     <h4>Chi tiết sản phẩm</h4>
                    
                     <p>
-                    Chất liệu: Bạc S925 an toàn cho da.                    </p>
+                    Chất liệu: Bạc S925 an toàn cho da.                    
+                    </p>
                     <h4>Khác</h4>
                         <ul style="list-style: none;">
                             <li><i class='fa fa-angellist'></i> 7 ngày miễn phí trả hàng</li>
@@ -161,6 +164,12 @@
                                 <div class='text'>
                                     <h3> <a href='details.php?pro_id=$pro_id'> $pro_title </a> </h3>
                                     <p class='price'> $pro_price </p>
+                                    <p class='button text-center'>
+                                        <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
+                                            Xem chi tiết
+                                        </a>                                                      
+                                                    
+                                    </p>
                                 </div>
                             </div>
                         </div>
