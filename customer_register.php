@@ -46,12 +46,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Quốc gia</label>
+                                <label>Quận/Huyện</label>
                                 <input type="text" class="form-control" name="c_country" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Tỉnh/thành phố</label>
+                                <label>Tỉnh/Thành phố</label>
                                 <input type="text" class="form-control" name="c_city" required>
                             </div>
 
