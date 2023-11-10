@@ -77,7 +77,7 @@ if(isset($_GET['pro_id'])){
                <a href="#" class="btn btn-primary btn-sm">
                     <?php
                         if(!isset($_SESSION['customer_email'])){
-                            echo"Welcome: Khách hàng";
+                            echo"Welcome";
                         }else{
                             echo"Welcome: " . $_SESSION['customer_email'] . "";
                         }
@@ -255,31 +255,3 @@ if(isset($_GET['pro_id'])){
         $p_cat_title = $row_p_cat['p_cat_title'];
     }
 ?>
-
-
-    <!-- <div class='col-md-4 col-sm-6 center-responsive'>
-        <div class='product'>
-            <a href='details.php?pro_id=$pro_id'>
-                <img src='admin_area/product_images/$pro_img1'>
-
-            </a>
-            <div class='text'>
-                <h3>
-                    <a href='details.php?pro_id=$pro_id'> $pro_title </a>
-                </h3>
-                <p class='price'>
-                    $pro_price
-                </p>
-                <p class'button'>
-                    <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
-                        View Details
-                    </a>
-                    <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
-                        <i class='fa fa-shopping-cart'></i> Add To Cart
-                    
-                    </a>
-                
-                </p>
-            </div>
-        </div>
-    </div> -->
