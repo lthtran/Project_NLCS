@@ -14,6 +14,7 @@
                     <li>
                         Cửa hàng
                     </li>
+                    
                 </ul>
             </div>
 
@@ -57,7 +58,7 @@
                                     $page=1;
                             }
                                 $start_from = ($page-1) * $per_page;
-                                $get_products = "select * from products order by 1 desc limit $start_from,$per_page";
+                                $get_products = "select * from products limit $start_from,$per_page";
                                 $run_products = mysqli_query($con,$get_products);
                                 while($row_products=mysqli_fetch_array($run_products)){
                                     $pro_id = $row_products['product_id'];
@@ -80,7 +81,7 @@
                                                     <p class='price'>
                                                        $pro_price
                                                     </p>
-                                                    <p class='buttons text-center'>
+                                                    <p class='button text-center'>
                                                         <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
                                                             Xem chi tiết
                                                         </a>                                                      
