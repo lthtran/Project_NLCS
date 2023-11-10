@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","alias-store");
+$con = mysqli_connect("localhost","root","","aliasstore");
 
  ?>
 <div id="footer">
