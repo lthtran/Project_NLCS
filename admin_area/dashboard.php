@@ -214,83 +214,60 @@
 <hr/>
 
 <div class="row">
+
     <div class="col-lg-8">
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <i class="fa fa-money fa-fw"></i> Đơn hàng mới
+                    <i class="fa fa-tags"></i> Các khoản thanh toán
                 </h3>
             </div>
-
             <div class="panel-body">
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped table-bordered">
-                        <thead>
-                          <tr>
-                            <th> STT: </th>
-                            <th> Email khách: </th>
-                            <th> Mã hóa đơn: </th>
-                            <th> ID sản phẩm: </th>
-                            <th> Số lượng: </th>
-                            <th> Status: </th>
-                          </tr>
-                        </thead>
-                        
+                    <table class="table table-striped table-bordered table-hover">
+                        <thread>
+                            <tr class="text-center">
+                                <th> STT </th>
+                                <th> STT hóa đơn </th>
+                                <th> Giá </th>
+                                <th> Chế độ thanh toán </th>
+                                <th> Mã hóa đơn </th>
+                                <th> Ngày thanh toán </th>
+                                <th> Xóa thanh toán </th>
+                            </tr>
+                        </thread>
                         <tbody>
+                            <?php
+                                $i=0;
+                                $get_payments = "select * from payments";
+                                $run_payments = mysqli_query($con, $get_payments);
+                                while($row_payment=mysqli_fetch_array($run_payments)){
+                                    $payment_id = $row_payment['payment_id'];
+                                    $invoice_no = $row_payment['invoice_no'];
+                                    $amount = $row_payment['amount'];
+                                    $payment_mode = $row_payment['payment_mode'];
+                                    $ref_no = $row_payment['ref_no'];
+                                    $payment_date = $row_payment['payment_date'];
+                                    $i++;
 
-                        <?php 
-
-                            $i=0;
-                            $get_order = "select * from pending_orders";
-                            $run_order = mysqli_query($con,$get_order);
-                            while($row_order=mysqli_fetch_array($run_order)){
-                                $order_id = $row_order['order_id'];
-                                $c_id = $row_order['customer_id'];
-                                $invoice_no = $row_order['invoice_no']; 
-                                $product_id = $row_order['product_id'];
-                                $qty = $row_order['qty'];
-                                $order_status = $row_order['order_status'];
-                                $i++;
-                        ?>
-                            <tr>
-                                <td> <?php echo $order_id; ?> </td>
-                                <td> 
-                                    <?php  
-                                        $get_customer = "select * from customers where customer_id='$c_id'";   
-                                        $run_customer = mysqli_query($con,$get_customer);
-                                        $row_customer = mysqli_fetch_array($run_customer);
-                                        $customer_email = $row_customer['customer_email'];
-                                        echo $customer_email;
-                                    ?>
-                                </td>
-                                <td> <?php echo $invoice_no; ?> </td>
-                                <td> <?php echo $product_id; ?> </td>
-                                <td> <?php echo $qty; ?> </td>
-                                <td> 
-                                    <?php
-                                        if($order_status == 'Pending'){
-                                            echo $order_status='Pending';
-                                        }
-                                        else{
-                                            echo $order_status='Complete';
-                                        }
-                                    ?>
-                                
+                            ?>
+                            <tr class="text-center">
+                                <td> <?php echo $i; ?></td>
+                                <td> <?php echo $invoice_no; ?></td>
+                                <td> <?php echo $amount; ?></td>
+                                <td> <?php echo $payment_mode; ?></td>
+                                <td> <?php echo $ref_no; ?></td>
+                                <td> <?php echo $payment_date; ?></td>
+                                <td> <a href="index.php?delete_payment=<?php echo $payment_id; ?>">
+                                        <i class="fa fa-trash-o"></i> Xóa 
+                                    </a>
                                 </td>
                             </tr>
-
                             <?php } ?>
                         </tbody>
-                    </table>                   
-                </div>
-
-                <div class="text-right">
-                    <a href="index.php?view_orders">
-                        Xem tất cả đơn hàng <i class="fa fa-arrow-circle-right"></i>
-                    </a>
+                    </table>
                 </div>
             </div>
-
         </div>
     </div>
 
