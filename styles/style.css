@@ -278,14 +278,14 @@ body{
     padding: 20px;
     border-top: 1px solid #eeeeee;
 }
-#content #order-summary table{
+#content #order table{
     margin-top: 20px;
 }
-#content #order-summary table td{
+#content #order table td{
     color: #999999;
 }
-#content #order-summary table tr.total td,
-#content #order-summary table tr.total th{
+#content #order table tr.total td,
+#content #order table tr.total th{
     font-size: 18px;
     color: #555555;
     font-weight: 700;
