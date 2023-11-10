@@ -36,13 +36,13 @@ if(isset($_GET['order_id'])){
                <a href="#" class="btn btn-success btn-sm">
                     <?php
                         if(!isset($_SESSION['customer_email'])){
-                            echo"Welcome: Khách hàng";
+                            echo"Welcome";
                         }else{
                             echo"Welcome: " . $_SESSION['customer_email'] . "";
                         }
                     ?>
                </a>
-               <a href="checkout.php"><?php items(); ?> sản phẩm trong giỏ hàng | Tổng cộng: <?php total_price(); ?> </a>
+               <a href="checkout.php"><?php items(); ?> sản phẩm | Tổng cộng: <?php total_price(); ?> </a>
                
            </div>
            
