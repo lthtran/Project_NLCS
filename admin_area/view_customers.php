@@ -32,8 +32,8 @@
                                 <th> Tên khách hàng: </th>
                                 <th> Ảnh: </th>
                                 <th> Email: </th>
-                                <th> Quốc gia: </th>
-                                <th> Thành phố: </th>
+                                <th> Quận/Huyện: </th>
+                                <th> Tỉnh/Thành phố: </th>
                                 <th> Địa chỉ: </th>
                                 <th> Liên hệ: </th>
                                 <th> Xóa </th>
